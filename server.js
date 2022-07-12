@@ -20,7 +20,7 @@ const options = {
 
 app.use(express.static(path.join(__dirname, host), options));
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'main.js')));
+//app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'main.js')));
 
 app.get('/other', (req, res) => res.json({name: 'AMMO', id: Math.random() * 10000}));
 
