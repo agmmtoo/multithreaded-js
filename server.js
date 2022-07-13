@@ -8,21 +8,23 @@ const app = express();
 const host = process.argv[2] || '.';
 
 const options = {
-	setHeaders: (res, pth, stat) =>
-	// set headers
-        res.set({
-                'Cross-Origin-Opener-Policy': 'same-origin',
-                'Cross-Origin-Embedder-Policy': 'require-corp',
-                'X-Created-By': 'agmyintmyatoo'
-        }),
+        setHeaders: (res, pth, stat) =>
+                // set headers
+                res.set({
+                        'Cross-Origin-Opener-Policy': 'same-origin',
+                        'Cross-Origin-Embedder-Policy': 'require-corp',
+                        'X-Created-By': 'agmyintmyatoo'
+                }),
 
 };
 
 app.use(express.static(path.join(__dirname, host), options));
 
-//app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'main.js')));
+app.get('/', (req, res) => {
+        res.sendFile(path.join(__dirname,))
+});
 
-app.get('/other', (req, res) => res.json({name: 'AMMO', id: Math.random() * 10000}));
+app.get('/other', (req, res) => res.json({ name: 'AMMO', id: Math.random() * 10000 }));
 
 const server = http.createServer(app);
 

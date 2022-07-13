@@ -1,5 +1,5 @@
 class Grid {
-	constructor(size, buffer, paint = () => {}) {
+	constructor(size, buffer, paint = () => { }) {
 		const sizeSquared = size * size;
 		this.buffer = buffer;
 		this.size = size;
