@@ -1,0 +1,17 @@
+{
+  "name": "ch8-template-render",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rpc-worker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^4.2.1",
+    "mustache": "^4.2.0"
+  }
+}
